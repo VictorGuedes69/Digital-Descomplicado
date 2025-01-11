@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Digital Descomplicado</title>
     <style>
-        /* Estilos gerais da seção */
-        section {
+         /* Estilos gerais da seção */
+         section {
             padding: 1.5rem;
             background: linear-gradient(135deg, #eef2f7, #d9eaf7);
             border-radius: 10px;
@@ -91,6 +91,7 @@
             align-items: center;
             justify-content: center;
             gap: 1rem;
+            flex-wrap: wrap; /* Permite quebra para telas menores */
         }
         header img {
             border-radius: 50%;
@@ -101,6 +102,7 @@
             font-size: 2.8rem;
             margin: 0;
             font-weight: 700;
+            text-align: center;
         }
 
         /* Menu de navegação */
@@ -115,6 +117,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            flex-wrap: wrap; /* Permite quebra em telas menores */
         }
         nav a {
             color: white;
@@ -122,6 +125,7 @@
             font-weight: 600;
             text-transform: uppercase;
             transition: color 0.3s;
+            font-size: 1rem;
         }
         nav a:hover {
             color: #f39c12;
@@ -141,11 +145,59 @@
             padding: 2rem;
             background-color: #333;
             color: white;
+            margin-top: auto;
         }
         footer p {
             margin: 0;
             font-size: 0.9rem;
             font-weight: 400;
+        }
+
+        /* Ajustes responsivos para tablets e celulares */
+        @media (max-width: 768px) {
+            header img {
+                margin-right: 0;
+                height: 60px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            form {
+                padding: 1rem;
+            }
+            input, textarea {
+                font-size: 0.9rem;
+            }
+            button {
+                font-size: 0.9rem;
+                padding: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                font-size: 0.8rem;
+            }
+            header img {
+                height: 50px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            form {
+                padding: 0.8rem;
+            }
+            input, textarea {
+                font-size: 0.8rem;
+            }
+            button {
+                font-size: 0.8rem;
+                padding: 0.6rem;
+            }
         }
     </style>
 </head>
@@ -187,12 +239,12 @@
     </footer>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        emailjs.init("xJk5nfZSdVkOKRg0S"); // Substitua por seu User ID do EmailJS
+        emailjs.init("SEU_USER_ID"); // Substitua por seu User ID do EmailJS
 
         document.querySelector("form").addEventListener("submit", function(e) {
             e.preventDefault();
 
-            emailjs.sendForm("service_q8g3j5e", "template_03ox31z", this)
+            emailjs.sendForm("SEU_SERVICE_ID", "SEU_TEMPLATE_ID", this)
                 .then(() => {
                     alert("Mensagem enviada com sucesso!");
                     this.reset(); // Limpa o formulário após o envio

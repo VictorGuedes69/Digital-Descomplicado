@@ -4,177 +4,22 @@
     <link rel="icon" type="image/png" href="DALL·E 2025-01-09 23.48.01 - A modern and clean logo design for a favicon, featuring the initials 'DD' for 'Digital Descomplicado'. The letters are styled in a sleek, minimalist f.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Bem-vindo ao Digital Descomplicado! Explore conteúdos e serviços sobre marketing digital, finanças pessoais, dietas fitness e suplementos.">
+    <meta name="keywords" content="marketing digital, finanças pessoais, dietas fitness, suplementos, Digital Descomplicado">
+    <meta name="author" content="Digital Descomplicado">
+    <meta property="og:title" content="Digital Descomplicado - Transformando suas ideias em realidade digital">
+    <meta property="og:description" content="Especialistas em marketing digital, finanças pessoais e saúde. Aprenda, evolua e conquiste seus objetivos.">
+    <meta property="og:image" content="DALL·E 2025-01-09 23.48.01 - A modern and clean logo design for a favicon, featuring the initials 'DD' for 'Digital Descomplicado'. The letters are styled in a sleek, minimalist f.webp">
+    <meta property="og:url" content="https://victorguedes69.github.io/Digital-Descomplicado/">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="index.css">
     <title>Digital Descomplicado</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+       
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background: #ffffff;
-            color: #333;
-            padding: 1rem 0;
-            border-bottom: 2px solid #eaeaea;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-        header img {
-            border-radius: 50%;
-            height: 80px;
-            margin-right: 2rem;
-        }
-        header h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            font-weight: 700;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            font-weight: 400;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #f39c12;
-        }
-        .hero {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            font-weight: 400;
-        }
-        main {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 1.5rem;
-        }
-        .article {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        .article img {
-            width: 30%;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            object-fit: cover;
-        }
-        .article-content {
-            flex: 1;
-        }
-        .article-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #2575fc;
-            font-weight: 700;
-        }
-        .article-content p {
-            line-height: 1.6;
-            color: #555;
-            font-weight: 400;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #333;
-            color: white;
-            margin-top: 3rem;
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-            font-weight: 400;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-            header img {
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            .hero {
-                padding: 2rem 1rem;
-            }
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-            .hero p {
-                font-size: 0.9rem;
-            }
-            main {
-                padding: 1rem;
-            }
-            .article {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .article img {
-                width: 100%;
-                object-fit: contain;
-            }
-            .article-content h3 {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav {
-                flex-wrap: wrap;
-                gap: 0.5rem;
-            }
-            nav a {
-                font-size: 0.8rem;
-            }
-            header h1 {
-                font-size: 1.8rem;
-            }
-            header p {
-                font-size: 0.8rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -216,6 +61,115 @@
         </div>
     </main>
 
+    <section id="blog-posts">
+        <h2>Últimas Postagens</h2>
+        <div id="posts-container"></div>
+    </section>
+    <script>
+        const blogPosts = [
+            {
+                title: "O Dólar Acima de R$6: Oportunidade ou Desafio para Investidores?",
+                content: `
+                    Recentemente, o mercado financeiro brasileiro foi abalado por uma notícia que mexeu com a rotina de investidores e trabalhadores: 
+                    o dólar ultrapassou a marca histórica de R$6. Esse cenário, embora alarmante para muitos, também abre portas para reflexões importantes 
+                    sobre oportunidades de investimentos e formas de sair da dependência do padrão CLT.<br><br> 
+                    <img src="./image/dolar_grafico.jpeg" alt="Gráfico do dólar em alta" 
+                         style="width: 100%; max-width: 500px; margin: 20px auto; display: block; border-radius: 10px;"> 
+                    Mas o que significa, de fato, esse aumento para o seu bolso e suas perspectivas de crescimento financeiro? Vamos explorar juntos os impactos, 
+                    os desafios e como você pode transformar essa situação em uma alavanca para conquistar sua independência financeira.<br><br>
+                    O Cenário Atual: O Que Leva o Dólar a Ultrapassar R$6?<br><br>
+                    A alta do dólar está relacionada a diversos fatores econômicos e políticos, tanto no âmbito internacional quanto nacional. 
+                    No contexto global, a instabilidade gerada por conflitos geopolíticos, desaceleração econômica e as decisões de política monetária dos Estados Unidos 
+                    influenciam diretamente a força da moeda americana. Internamente, fatores como déficits fiscais, inflação elevada e incertezas 
+                    políticas criam um ambiente de insegurança para investidores estrangeiros, reduzindo a entrada de capital no Brasil.
+                    Para o cidadão comum, isso se traduz em aumento de preços de produtos importados, como combustíveis, eletrônicos e 
+                    alimentos. Mas, para quem deseja romper com os limites do salário fixo e construir um futuro próspero, a desvalorizacão do real também pode ser um incentivo para buscar alternativas no mundo dos investimentos.<br><br>
+                    Por Que Este Momento é Crucial para Investidores?<br><br>
+                    Embora a alta do dólar seja vista como um problema por muitos, ela também representa uma oportunidade para diversificação e ganhos financeiros, especialmente para aqueles que estão atentos às mudanças do mercado.
+                    <br><br>
+                    Investimentos no Exterior:<br>
+                    Com o dólar valorizado, investidores brasileiros podem se beneficiar ao aplicar recursos em ações e fundos no exterior. Embora a conversão inicial possa parecer cara, os retornos em dólar oferecem proteção contra a desvalorização do real e abrem as portas para mercados mais estáveis e diversificados.
+                    <br><br>
+                    Exportações e Empresas Exportadoras:<br>
+                    Empreendedores que atuam em setores exportadores ou investem em ações de empresas que vendem para o mercado externo podem se beneficiar diretamente da alta do dólar. O aumento do faturamento em moeda estrangeira fortalece essas empresas, refletindo positivamente em seus resultados financeiros.
+                    <br><br>
+                    Educação Financeira:<br>
+                    Momentos como este reforçam a importância de aprender sobre economia e investimentos. Cursos, mentorias e conteúdo sobre o mercado financeiro tornam-se essenciais para quem deseja tomar decisões embasadas e aproveitar as oportunidades que surgem em cenários adversos.
+                `,
+                image: "./image/branding-780x438.webp",
+                link: "#"
+            },
+            {
+                title: "Para Quem Quer Mais do Que a CLT",
+                content: `
+                    Se você é uma das muitas pessoas que se sentem presas ao padrão de trabalho tradicional, saiba que esse momento
+                     pode ser o ponto de partida para sua transformação financeira. A alta do dólar pode servir como um estímulo para explorar alternativas que vão além da segurança de um salário fixo.<br><br> 
+                     Empreendedorismo Digital:<br> A desvalorizacão do real torna serviços e produtos brasileiros mais competitivos no mercado internacional. Vender cursos, ebooks, consultorias ou mesmo serviços freelances para o exterior pode gerar uma renda significativa em dólares.<br><br>
+
+                    Investimentos Automatizados:<br> Ferramentas digitais permitem que até mesmo iniciantes invistam em bolsas internacionais, criptoativos ou outros instrumentos financeiros que se beneficiam da instabilidade cambial.<br><br>
+
+                    Renda Passiva:<br> Imóveis em plataformas como Airbnb, royalties de conteúdo digital e dividendos de ações são exemplos de fontes de renda que podem ajudar a complementar o orçamento e até substituir o salário tradicional.<br><br>
+                    <img src="./image/financas.webp" alt="Planejamento Financeiro" 
+                    style="width: 100%; max-width: 500px; margin: 20px auto; display: block; border-radius: 10px;"> 
+                    Superando o Medo de Começar<br><br>
+
+                    É natural sentir insegurança ao pensar em romper com o modelo tradicional de trabalho e explorar o universo dos investimentos. Contudo, é importante lembrar que grandes conquistas começam com pequenos passos. Buscar conhecimento, planejar suas ações e estar disposto a aprender com os erros são pilares fundamentais para o sucesso financeiro.<br><br>
+
+                    Se você já percebeu que o padrão CLT não é suficiente para atender às suas expectativas de vida, o momento atual pode ser a oportunidade que você precisava para mudar. O dólar acima de R$6 é um sinal claro de que o mercado está mudando, e aqueles que estiverem preparados podem se beneficiar imensamente dessas transformações.<br><br>
+                    
+                    Conclusão: Agir Hoje, Colher Amanhã<br><br>
+                    Embora a alta do dólar traga desafios para muitos, ela também pode ser vista como um catalisador de mudanças e crescimento para aqueles dispostos a aprender e se adaptar. Este é o momento de refletir sobre suas prioridades financeiras e considerar como você pode usar o cenário atual a seu favor.<br><br>
+
+                    Seja através de investimentos, empreendedorismo digital ou busca por novas fontes de renda, as possibilidades são muitas. O importante é não deixar o medo paralisá-lo. Dê o primeiro passo hoje e comece a trilhar um caminho que pode levar você a uma vida mais próspera e independente.<br><br>
+
+                    O futuro pertence a quem se prepara para ele. E você, está pronto para começar?<br><br>
+                `,
+                image: "./image/porco.webp",
+                link: "#"
+            }
+        ];
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById("posts-container");
+    
+            blogPosts.forEach((post, index) => {
+                const postElement = document.createElement("div");
+                postElement.classList.add("article");
+    
+                // Divide o conteúdo em duas partes
+                const previewContent = post.content.slice(0, 400); // Mostra os primeiros 500 caracteres
+                const fullContent = post.content.slice(100); // Resto do texto
+    
+                postElement.innerHTML = `
+                    <img src="${post.image}" alt="${post.title}" 
+                         style="width: 60%; max-width: 300px; border-radius: 10px; 
+                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+                    <div class="article-content bordered-content">
+                        <h3>${post.title}</h3>
+                        <p>${previewContent}<span class="more-text" style="display: none;">${fullContent}</span></p>
+                        <button class="read-more-btn" data-index="${index}" style="color: white; background-color: #2575fc; border: none; border-radius: 5px; padding: 0.5rem 1rem; margin-top: 1rem; cursor: pointer;">Leia mais</button>
+                    </div>
+                `;
+    
+                container.appendChild(postElement);
+            });
+    
+            // Evento para o botão "Leia mais"
+            container.addEventListener("click", (e) => {
+                if (e.target.classList.contains("read-more-btn")) {
+                    const moreText = e.target.previousElementSibling.querySelector(".more-text");
+                    if (moreText.style.display === "none") {
+                        moreText.style.display = "inline"; // Mostra o texto completo
+                        e.target.textContent = "Mostrar menos"; // Altera o texto do botão
+                    } else {
+                        moreText.style.display = "none"; // Oculta novamente
+                        e.target.textContent = "Leia mais"; // Volta para o texto original
+                    }
+                }
+            });
+        });
+    </script>
+    
     <footer>
         <p>&copy; 2025 Digital Descomplicado. Todos os direitos reservados.</p>
     </footer>
